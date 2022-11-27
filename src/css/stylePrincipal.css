@@ -65,6 +65,25 @@ p {
 
     
 }
+.menu-nav{
+    background: rgb(255, 201, 0);
+    background-image: linear-gradient(36deg, #FF8B2B 13%, #1761a0 73% );
+    padding: 5px;
+    position: relative;
+    box-sizing: border-box;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+.menu-nav a img{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+    border: solid 4px white;
+}
 .first-button{
     color: #1761a0;
     font-size: 35px;
