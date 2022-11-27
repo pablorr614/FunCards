@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import { getFirestore,collection, addDoc} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import { getFirestore} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 import { getAuth} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -21,7 +21,3 @@ console.log(app)
 export const db = getFirestore(app)
 export const auth = getAuth(app)
 
-// añadir usuarios a la bd 
-export const guardarUsuario =  (nombre, apellido,email,pass) => {
-    addDoc(collection(db,'usuarios'),{nombre, apellido,email,pass});
-  }
