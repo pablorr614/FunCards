@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/stylePrincipal.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="module" src="./main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
     <title>Funcards</title>
 </head>
@@ -18,8 +19,8 @@
                 <img id="logoImg" src="./img/logoo1.png" alt="Logo De Funcards">
             </div>
             <nav id="navHeader">
-                <button class="first-button">Inicio</button>
-                <button class="first-button reg">Registro</button>
+                <button id="popup-in" onclick="popupin()" class="first-button">Inicio</button>
+                <button id="popup-up" onclick="popupup()" class="first-button reg">Registro</button>
             </nav>
 
         </header>
@@ -54,9 +55,8 @@
                         </a>
                     
                         <h2>Transportes </h2>
-                        <p><br>Con este Metodo los niños 
-                        aprenderas media vocabulario
-                        y mejorando su memoria. 
+                        <p><br>Aprenderan a leer y hablar mas rapido que otros niños,
+                            gracias a la gran capacidad que tiene los niños.
                         </p>
                         
                     </div>
@@ -64,13 +64,11 @@
                 <div class="card">
                     <div class="imgBx">
                         <a href="#">
-                        <img src="./iconosTarjeta/deportes.png">
+                        <img src="./iconosTarjeta/profeciones/medico.png">
                         </a>
                     
                         <h2>Profeciones</h2>
-                        <p><br>Con este Metodo los niños 
-                        aprenderas media vocabulario
-                        y mejorando su memoria. 
+                        <p><br>Se divertiran con los mini juegos que tenemos dispobles para en la app, que fomenta en aprendisaze con retos para ganar puntos para los juegos.
                         </p>
                         
                     </div>
@@ -107,10 +105,32 @@
         </footer>
 
 
-        <!-- Esto es un comentario -->
+        <!-- Modales -->
+        <div  class="popup" id="login-formModal">
+            <from class="content" id="popup-1">
+                <div class="close-btn" onclick="popupin()">×</div>
+                <h2>inicio de secion</h2>
+                <div  class="input-field"><input id="login-email" placeholder="Email" class="validate"></div>
+                <div class="input-field"><input id="login-pass" placeholder="Password" class="validate"></div>
+                <button type="submit" class="second-button"><a href="">INICIO</a></button>
+                <p>Don't have an account? <a onclick="popupUp()">Sign Up</a></p>
+            </from>
+        </div>
 
+        <div class="popup" id="signup-formModal">
+            <form class="content" id="signup-form">
+                <div class="close-btn" onclick="popupup()">×</div>
+                <h2>Registro</h2>
+                <div class="input-field" ><input id="inpNombre" placeholder="Nombre" class="validate"></div>
+                <div class="input-field" ><input id="inpApellido" placeholder="Apellido" class="validate"></div>
+                <div class="input-field" ><input id="inpEmail" placeholder="Email" class="validate"></div>
+                <div class="input-field" ><input id="inpPass" placeholder="Password" class="validate"></div>
+                <button id="envio" type="submit" class="second-button"><a href="">Registro </a></button>
+                <p>Don't have an account? <a href="/signup.html">Sign Up</a></p>
+            </from>
+        </div>
 
     </div>
-    
+    <script src="./app/funcion.js"></script>
 </body>
 </html>

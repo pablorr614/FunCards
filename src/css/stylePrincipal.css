@@ -20,6 +20,16 @@ h1 {
     letter-spacing: 0.3em
 }
 
+h2 {
+    font-size: 2em;
+    color: #FF8B2B;
+
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
 p {
     font-size: 1.25em;
     color: black;
@@ -101,7 +111,7 @@ p {
 .card{
 	width:308px;
 	position: relative;
-	
+	height: 400px;
 	background: #f0f0f0;
 	margin:30px 10px;
 	padding: 20px 15px;
@@ -251,4 +261,111 @@ p {
 
 .footer-menu ul li a:hover {
     color: #27bcda;
+}
+
+/* modales */
+.popup .content {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -150%) scale(0);
+    width: 350px;
+   
+    z-index: 2;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: #dfdfdf;
+    z-index: 1;
+}
+
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 2px 5px 7px 5px;
+    background: #1761a0;
+    font-family: sans-serif;
+
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: rgb(91, 91, 92);
+}
+
+.content p a {
+    font-weight: 600;
+    color: #1761a0;
+}
+
+.content p {
+    color: #141414;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.input-field .validate {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+    color: #000000;
+    background: #ffffff;
+    border: 2px solid rgb(214, 214, 214);
+    width: 270px;
+    outline: none;
+}
+
+.input-field .validate:focus {
+    border-color: #FF8B2B;
+}
+
+.second-button {
+  
+    width: 280px;
+    
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: none;
+    background: #1761a0;
+    transition: box-shadow .35s ease !important;
+    outline: none;
+}
+
+.btn-green {
+    color: white;
+    background-color: #1761a0;
+}
+
+.second-button:hover {
+    background-color: #FF8B2B;
+}
+
+
+
+.second-button:active {
+    background: linear-gradient(145deg, #1761a0, #ff8b2b);
+    border: none;
+    outline: none;
 }
