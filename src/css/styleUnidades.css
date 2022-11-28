@@ -60,6 +60,11 @@ p {
     align-items: center;
 
 }
+#logoImg {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
 .vida {
     padding-right: 25px;
     font-size: 50px;

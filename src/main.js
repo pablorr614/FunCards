@@ -4,6 +4,7 @@ import {loginCheck} from './BD/loginCheck.js'
 
 import './BD/signup.js'
 import './BD/logout.js'
+import './BD/signin.js'
 
 onAuthStateChanged(auth, async (user)=>{
     if(user){
