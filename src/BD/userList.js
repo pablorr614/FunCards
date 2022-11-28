@@ -1,4 +1,4 @@
-const postList = document.querySelector('.posts')
+
 const userList = document.querySelector('.user')
 
 export const setupUser = (data) => {
@@ -12,10 +12,14 @@ export const setupUser = (data) => {
            const li = `
            <tr>
            <td class="centrado">1</td>
-           <td class="centrado">${user.nombre}</td>
+           <td class="centrado">${user.nom}</td>
            <td class="centrado">${user.email}</td>
            <td class="centrado">${user.pass}</td>
            <td class="centrado">${user.lv}</td>
+           <td class="centrado">${user.vidas}</td>
+           <td class="centrado">${user.monedas}</td>
+           <td class="centrado">${user.record}</td>
+           
            
            <td class="centrado">
                <p>

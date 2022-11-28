@@ -14,8 +14,9 @@ formUp.addEventListener('submit', async (e) =>{
     const email = formUp['up-email'].value
     const pass = formUp['up-pass'].value 
     const lv = 2;
-    const vidas =0;
-    const monedas =0;
+    const vidas = 0;
+    const monedas = 0;
+    const  record =0;
     console.log(nom,ape,email,pass)
     showMessage("Bienvenido "+ nom, "success")
     try {
@@ -24,7 +25,7 @@ formUp.addEventListener('submit', async (e) =>{
         const userCredentials = await createUserWithEmailAndPassword(auth, email, pass)
         console.log(userCredentials)
         //Se guardan los datos en la bd
-        const userAdd = addDoc(collection(db,'usuarios'),{nom, ape,email,pass,lv,vidas,monedas});
+        const userAdd = addDoc(collection(db,'usuarios'),{nom, ape,email,pass,lv,vidas,monedas,record});
         console.log(userAdd)
         popupup()
         window.open("/src/vistas/unidades.html","unidades")
