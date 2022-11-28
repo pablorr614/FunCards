@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Coming Soon';
+    letter-spacing: 0.3em
+
+}
+
+body{
+    background: #114357;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F29492, #114357);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F29492, #114357); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Coming Soon';
+}
+
+#funcard{
+    font-size: 30px;
+    letter-spacing: 0.3em
+}
+
+h2 {
+    font-size: 2em;
+    color: #FF8B2B;
+
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1.25em;
+    color: black;
+
+
+}
+
+#descripcion{
+    resize: none;
+}
+.centrado{
+    /*Centrado tanto vertical como horizontal*/
+    text-align: center;
+    vertical-align: middle;
+}

@@ -1,11 +1,11 @@
-console.log("hello up")
+
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 import { showMessage} from '../app/showMessage.js';
 import { auth,db } from "./fireBase.js";
 //evento del formulario
 const  formUp = document.querySelector('#signup-form');
-console.log(formUp)
+
 
 formUp.addEventListener('submit', async (e) =>{
     e.preventDefault()
@@ -14,6 +14,8 @@ formUp.addEventListener('submit', async (e) =>{
     const email = formUp['up-email'].value
     const pass = formUp['up-pass'].value 
     const lv = 2;
+    const vidas =0;
+    const monedas =0;
     console.log(nom,ape,email,pass)
     showMessage("Bienvenido "+ nom, "success")
     try {
@@ -22,7 +24,7 @@ formUp.addEventListener('submit', async (e) =>{
         const userCredentials = await createUserWithEmailAndPassword(auth, email, pass)
         console.log(userCredentials)
         //Se guardan los datos en la bd
-        const userAdd = addDoc(collection(db,'usuarios'),{nom, ape,email,pass,lv});
+        const userAdd = addDoc(collection(db,'usuarios'),{nom, ape,email,pass,lv,vidas,monedas});
         console.log(userAdd)
         popupup()
         window.open("/src/vistas/unidades.html","unidades")
