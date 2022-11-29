@@ -12,9 +12,11 @@ import './BD/logout.js'
 onAuthStateChanged(auth, async (user)=>{
     if(user){
         loginCheck(user)
-       
+        
         
         console.log(user.email) 
+        console.log(user.uid) 
+        
         
     }else{
         loginCheck(user) 

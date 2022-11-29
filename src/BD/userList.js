@@ -9,6 +9,7 @@ export const setupUser = (data) => {
         data.forEach(doc => {
            const user = doc.data()
            console.log(user) 
+           console.log(doc.id) 
            const li = `
            <tr>
            <td class="centrado">1</td>
@@ -24,7 +25,7 @@ export const setupUser = (data) => {
            <td class="centrado">
                <p>
                    <i class="bi bi-pencil-square"></i>
-                   <i class="bi bi-trash3-fill"></i>
+                   <i class="bi bi-trash3-fill delete"></i>
                </p>
                
            </td>
@@ -33,7 +34,16 @@ export const setupUser = (data) => {
         html += li
         });
         userList.innerHTML = html
-        console.log("loop user")
+
+        const btnDelete = userList.querySelectorAll('.delete')
+
+        btnDelete.forEach(btn =>{
+            btn.addEventListener('click',()=>{
+                console.log("delete")
+            })
+        })
+
+       
     }else{
         console.log("no user")
     }
