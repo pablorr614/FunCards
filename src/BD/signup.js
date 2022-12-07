@@ -30,7 +30,7 @@ formUp.addEventListener('submit', async (e) =>{
         const userAdd = addDoc(collection(db,'usuarios'),{nom, ape,email,pass,lv,vidas,monedas,record,uid});
         console.log(userAdd)
         popupup()
-        window.open("/src/vistas/unidades.html","unidades")
+       // window.open("/src/vistas/unidades.html","unidades")
     } catch (error) {
         if(error.code == 'auth/email-already-in-use'){
             showMessage("email ya registrado", "error")
