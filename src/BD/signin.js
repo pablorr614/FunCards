@@ -16,6 +16,7 @@ envio.addEventListener('click',  e =>{
         const userCredentials = signInWithEmailAndPassword(auth, email, password)
         
         console.log(userCredentials)
+        console.log(userCredentials.user)
         popupin()  
         
     } catch (error) {
