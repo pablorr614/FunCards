@@ -1,30 +1,19 @@
 import { onAuthStateChanged  } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { getDocs,collection} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
-import {auth} from './BD/fireBase.js'
-import {loginCheck} from './BD/loginCheck.js'
+import {auth,db} from '../BD/fireBase.js'
+import {setupUser}from '../BD/userList.js'
 
-
-import './BD/signup.js'
-import './BD/signin.js'
-import './BD/logout.js'
 
 onAuthStateChanged(auth, async (user)=>{
     if(user){
-        loginCheck(user)
-       
-        
+        const querySnapshot = await getDocs(collection(db,"usuarios"))
         console.log(user.email) 
-        
+        setupUser(querySnapshot.docs) 
     }else{
-        loginCheck(user) 
+       
     }
     
     
 })
 console.log("hello word")
-
-
-
-
-

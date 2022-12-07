@@ -2,10 +2,10 @@ import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9
 import { auth } from "./fireBase.js";
 import { showMessage} from '../app/showMessage.js';
 
-console.log("hello in")
+
 const signIn = document.querySelector('#login');
 const envio = document.getElementById('envio')
-console.log(signIn)
+
 
 envio.addEventListener('click',  e =>{
 
