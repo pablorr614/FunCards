@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Coming Soon';
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+h1{
+    font-size: 45px;
+    letter-spacing: 0.3em
+}
+h2 {
+    font-size: 2em;
+    color: #FF8B2B;
+
+}
+h3 {
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+}
+p {
+    font-size: 2em;
+    color: black;
+    
+    
+    
+}
+.contenedor{
+    position: relative;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#encabezado{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#objetos{
+    
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#logoImg {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.vida {
+    padding-right: 25px;
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #1761a0;
+    display: flex;
+}
+.vida p{
+    padding-right: 25px;
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #1761a0;
+}
+.vida img{
+    height: 50px;
+    width: 50px;
+}
+.money {
+    padding-right: 25px;
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff8b2b;
+    display: flex;
+}
+.money p{
+    padding-right: 25px;
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff8b2b;
+    display: flex;
+}
+.money img{
+    height: 50px;
+    width: 50px;
+}
+/*Centro de la app */
+.unidad{
+    height: 370px;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+
+
+#stories-container{
+    display: flex;
+    
+    padding: 40px 0;
+    
+}
+
+.story{
+    
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+
+
+
+
+/*Menu principal*/
+
+#menu-container{
+    display: flex;
+    justify-content: center ;
+    padding: 40px 0;
+    
+}
+.menu{
+    
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.menu-item{
+    background: rgb(255, 201, 0);
+    background-image: linear-gradient(36deg, #FF8B2B 13%, #1761a0 73% );
+    padding: 5px;
+    position: relative;
+    box-sizing: border-box;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+.menu-item img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+    border: solid 4px white;
+}
+
+.menu-nav{
+    background: rgb(255, 201, 0);
+    background-image: linear-gradient(36deg, #FF8B2B 13%, #1761a0 73% );
+    padding: 5px;
+    position: relative;
+    box-sizing: border-box;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+.menu-nav a img{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+    border: solid 4px white;
+}
