@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/css/playStyle.css">
+    <link rel="stylesheet" href="../css/dinoStylos.css">
     <title>Play</title>
 </head>
 <body>
@@ -27,34 +28,17 @@
                  </div>
             </div>
         </header>
+        
+        <div class="contenedor"> 
 
-        <div>
-            <h3>Juegos</h3>
-            <div class="unidad">
-                
-
-
-                <div id="stories-container">
-                    <button class="story active">
-                        <div class="profile">
-                            <img src="../iconosTarjeta/comida/burger.png" alt="">
-                        
-                        </div>
-                        <div class="title">
-                            COMIDA
-                        </div>
-                    </button>
-
-                    
-                   
-                </div>
-
-
-
-               
-            </div>
-
+            <div class="suelo"></div>
+            <div class="game-over">GAME OVER</div> 
+            <div class="dino dino-corriendo"></div>
+    
+            <div class="score">0</div>
+    
         </div>
+        <div class="game-over">GAME OVER</div> 
         
         <nav id="menu-container">
             <div class="menu">
@@ -81,7 +65,7 @@
         </nav>
        
     </div>  
-    
+    <script src="/src/miniPlay/mainDino.js"></script>
     <script src="/src/BD/logout.js" type="module"></script> 
 </body>
 </html>
