@@ -2,14 +2,34 @@
 
 //****** GAME LOOP ********//
 
+
+
+var moneda = 0
 var time = new Date();
 var deltaTime = 0;
 
-if(document.readyState === "complete" || document.readyState === "interactive"){
-    setTimeout(Init, 1);
-}else{
-    document.addEventListener("DOMContentLoaded", Init); 
+export function traerMonedas(dato){
+    console.log(dato)
+    dato.forEach(element => console.log(element));
 }
+
+
+gameOver = document.querySelector(".game-over");
+
+function initMon(mon){
+    if(moneda == mon){
+        if(document.readyState === "complete" || document.readyState === "interactive"){
+            setTimeout(Init, 1);
+        }else{
+            document.addEventListener("DOMContentLoaded", Init); 
+        }
+    }else{
+        gameOver.style.display = "block";
+        gameOver.innerText = "Sin monedas";
+    }
+}
+
+
 
 function Init() {
     time = new Date();
@@ -63,7 +83,7 @@ var suelo;
 var gameOver;
 
 function Start() {
-    gameOver = document.querySelector(".game-over");
+    
     suelo = document.querySelector(".suelo");
     contenedor = document.querySelector(".contenedor");
     textoScore = document.querySelector(".score");
