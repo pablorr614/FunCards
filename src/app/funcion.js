@@ -12,6 +12,7 @@ function popupup(){
     
 }
 
+
 function ghostUser(){
     vistaUser.forEach(link => link.style.display = 'none')
     vistaPalabra.forEach(link => link.style.display = 'block')

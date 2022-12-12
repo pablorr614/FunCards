@@ -219,3 +219,32 @@ p {
     padding: 0px;
     border: solid 4px white;
 }
+
+#CajaPalabras{
+    height: 664px;
+    margin: 15px;
+    display: flex;
+    color: black;
+    
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+}
+#fondo{
+    width: 885PX;
+    
+    margin: 15px;
+    display: flex;
+    color: black;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 140px;
+}
+#CajaPalabras p{
+    font-size: 100px;
+}

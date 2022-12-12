@@ -33,11 +33,37 @@ function insertarPalabra(){
 
 }*/
 
+
+
+export  async function listarVocavulario(unidad,vocabulario){
+    var list = []
+
+    const orderby =  await getDocs(collection(db,"palabras1"))
+        orderby.docs.forEach((doc) => {
+            const data = doc.data();
+            
+
+            if(data.unidad == unidad && data.vocabulario == vocabulario ){
+                console.log(data.palabra)
+
+                list.push(data.palabra)
+            }
+            
+        })
+
+        return list
+}
+
+
 async function listarPalabras(){
   
         const querySnapshot =  await getDocs(collection(db,"palabras1"))
-
         pintar(querySnapshot.docs);
+
+
+       
+
+        
   
 }
 
@@ -80,3 +106,14 @@ btnAddPalabra.addEventListener('click', (e) =>{
 })
 
 listarPalabras()
+
+var unidad = "1"
+var vocabulari = "1"
+const list1 = await listarVocavulario(unidad,vocabulari)
+
+
+console.log(list1)
+for (var i = 0; i < list1.length; i++) {
+    console.log(list1[i]);
+  } 
+

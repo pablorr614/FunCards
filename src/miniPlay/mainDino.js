@@ -4,13 +4,14 @@
 
 
 
-var moneda = 0
+var moneda = 1
 var time = new Date();
 var deltaTime = 0;
 
 export function traerMonedas(dato){
     console.log(dato)
-    dato.forEach(element => console.log(element));
+    
+    initMon(moneda)
 }
 
 
