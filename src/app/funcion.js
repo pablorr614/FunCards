@@ -16,10 +16,12 @@ function popupup(){
 function ghostUser(){
     vistaUser.forEach(link => link.style.display = 'none')
     vistaPalabra.forEach(link => link.style.display = 'block')
+    
 }
 function ghostPalabra(){
     vistaUser.forEach(link => link.style.display = 'block')
     vistaPalabra.forEach(link => link.style.display = 'none')
+    
 }
 
 

@@ -39,8 +39,9 @@
                         <table class="table  table-dark table-striped">
                             <thead>
                                 <tr>
-                                    <th class="centrado">#</th>
+                                    
                                     <th class="centrado">Nombre</th>
+                                    <th class="centrado">Apellido</th>
                                     <th class="centrado">Correo</th>
                                     <th class="centrado">Contraseña</th>
                                     <th class="centrado">Permisos</th>
@@ -109,6 +110,10 @@
                               <input type="text" class="form-control" id="nombre" placeholder="Nombre">
                             </div>
                             <div class="mb-3">
+                              <label for="ape" class="form-label">Apellido:</label>
+                              <input class="form-control" id="ape" type="text" placeholder="Apellido"/>
+                            </div>
+                            <div class="mb-3">
                               <label for="correo" class="form-label">Correo:</label>
                               <input class="form-control" id="correo" type="email"/>
                             </div>
@@ -140,8 +145,58 @@
             </div>
           </div>
 
+          <!-- Modal Actulizar Usuario-->
+        <div class="modal fade" id="modalActulizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">User</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h2>Formulario</h2>
+                    <form action="" id="upUser">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                          </div>
+                          <div class="mb-3">
+                            <label for="ape" class="form-label">Apellido:</label>
+                            <input class="form-control" id="ape" type="text" placeholder="Apellido"/>
+                          </div>
+                          <div class="mb-3">
+                            <label for="correo" class="form-label">Correo:</label>
+                            <input class="form-control" id="correo" type="email"/>
+                          </div>
+                          <div class="mb-3">
+                            <label for="contraseña" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="contra" placeholder="Contraseña">
+                          </div>
+                          <div class="mb-3">
+                            <label for="vida" class="form-label">Vidas:</label>
+                            <input class="form-control" id="vida" type="number"/>
+                          </div>
+                          <div class="mb-3">
+                            <label for="monedas" class="form-label">Modenas:</label>
+                            <input class="form-control" id="monedas" type="number"/>
+                          </div>
+                          <div class="mb-3">
+                            <label for="game" class="form-label">Record Game:</label>
+                            <input class="form-control" id="rgInco" type="number"/>
+                          </div>
+                          
+                          <div class="d-grid gap-2">
+                            <button id="btnUp" class="btn btn-success" type="button">Actulizar</button>
+                            
+                          </div>
+                    </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
 
-
+        <!-- Modal Añadir Palabra -->
           <div class="modal fade" id="exampleModalq" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -176,6 +231,49 @@
                             
                             <div class="d-grid gap-2">
                               <button id="btnAddPalabra" class="btn btn-success" type="button">Guardar</button>
+                              
+                            </div>
+                      </form>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Modal Actualizar Palabra -->
+          <div class="modal fade" id="modalUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Palabras</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h2>Formulario</h2>
+                      <form action="" id="UpPalabras">
+                          <div class="mb-3">
+                              <label for="palabra" class="form-label">Palabra:</label>
+                              <input type="text" class="form-control" id="palabratxt" placeholder="Palabra">
+                            </div>
+                            <div class="mb-3">
+                              <label for="significado" class="form-label">Significado:</label>
+                              <input class="form-control" id="significado" type="text"/>
+                            </div>
+                            <div class="mb-3">
+                              <label for="imagen" class="form-label">Imagen:</label>
+                              <input type="text" class="form-control" id="imagen" placeholder="Imagen">
+                            </div>
+                            <div class="mb-3">
+                              <label for="unidad" class="form-label">Unidad:</label>
+                              <input class="form-control" id="unidad" type="number"/>
+                            </div>
+                            <div class="mb-3">
+                              <label for="vocabulario" class="form-label">Vocabulario:</label>
+                              <input class="form-control" id="vocabulario" type="text"/>
+                            </div>
+                         
+                            
+                            <div class="d-grid gap-2">
+                              <button id="btnUpPalabra" class="btn btn-success" type="button">Actualizar</button>
                               
                             </div>
                       </form>

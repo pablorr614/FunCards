@@ -1,13 +1,34 @@
 //Conexion a la base de datos
 import {db} from '../fireBase.js'
-import { doc,deleteDoc,getDocs,addDoc,collection} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import { doc,deleteDoc,getDocs,addDoc,collection,getDoc,updateDoc} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
+
+let id = '';
 
 const querySnapshot =  getDocs(collection(db,"palabras1"));
 const formPalabra = document.querySelector("#addPalabras")
+
+const fromActuP = document.getElementById('UpPalabras')
+const btnUp = document.getElementById('btnUpPalabra')
+
+var myModalPala = new bootstrap.Modal(document.getElementById('exampleModalq'))
+var myModalActuPala = new bootstrap.Modal(document.getElementById('modalUp'))
+
 var Palabra = {};
 
-//Metodo crear
+btnUp.addEventListener("click", (e) => {
+    e.preventDefault()
+   const palabra = fromActuP['palabratxt'].value
+   const imagen = fromActuP['imagen'].value
+   const significado = fromActuP['significado'].value
+   const unidad = fromActuP['unidad'].value
+   const vocabulario = fromActuP['vocabulario'].value
+  
+   const userAdd = updateDoc(doc(db,'palabras1',id),{palabra, imagen,significado,unidad,vocabulario});
+   console.log(userAdd)
+    myModalActuPala.hide()
+
+})
 
 function insertarPalabra(){
     
@@ -22,16 +43,16 @@ function insertarPalabra(){
    
 
      addDoc(collection(db,'palabras1'),Palabra);
+
+     myModalPala.hide()
 }
 
-/*function borrarPalabra(id){
-    const id = event.target.dataset.id
-         deleteDoc(doc(db,"palabras1",id))
-}*/
+function borrarPalabra(id){
+    
+    deleteDoc(doc(db,"palabras1",id))
+}
 
-/*function editarPalabra(id){
 
-}*/
 
 
 
@@ -76,24 +97,51 @@ const pintar = (data) =>{
         data.forEach(doc => {
             const Palabra = doc.data();
             const li = `
-<tr>
-<td class="centrado">${Palabra.palabra}</td>
-<td class="centrado">${Palabra.significado}</td>
-<td class="centrado">${Palabra.imagen}</td>
-<td class="centrado">${Palabra.unidad}</td>
-<td class="centrado">${Palabra.vocabulario}</td>
-<td class="centrado">
-    <p>
-        <i class="bi bi-pencil-square edit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${doc.id}"></i>
-        <i class="bi bi-trash3-fill delete" data-id="${doc.id}"></i>
-    </p>  
-</td>
-</tr>
-`;
+            <tr>
+            <td class="centrado">${Palabra.palabra}</td>
+            <td class="centrado">${Palabra.significado}</td>
+            <td class="centrado">${Palabra.imagen}</td>
+            <td class="centrado">${Palabra.unidad}</td>
+            <td class="centrado">${Palabra.vocabulario}</td>
+            <td class="centrado">
+                <p>
+                    <i class="bi bi-pencil-square editP" data-bs-toggle="modal" data-bs-target="#modalUp" data-id="${doc.id}"></i>
+                    <i class="bi bi-trash3-fill deleteP" data-id="${doc.id}"></i>
+                </p>  
+            </td>
+            </tr>
+            `;
             html += li;
         });
 
         palabras.innerHTML = html;
+
+        const btnDelete = palabras.querySelectorAll('.deleteP')
+        const btnEdit = palabras.querySelectorAll('.editP')
+
+        btnDelete.forEach(btn =>{
+            btn.addEventListener('click',(event)=>{
+                const id = event.target.dataset.id
+                borrarPalabra(id)
+                
+                
+            })
+        })
+        btnEdit.forEach(btn =>{
+            btn.addEventListener('click',async (event)=>{
+                id = event.target.dataset.id
+                const docus = await getDoc(doc(db,"palabras1",id))
+                console.log(docus.data())
+                const pala = docus.data()
+                fromActuP['palabratxt'].value = pala.palabra
+                fromActuP['significado'].value = pala.significado
+                fromActuP['imagen'].value  = pala.imagen
+                fromActuP['unidad'].value     = pala.unidad
+                fromActuP['vocabulario'].value = pala.vocabulario
+                
+
+            })
+        })
     }
 }
 
